@@ -1,0 +1,16 @@
+var mongoose = require('mongoose');
+
+var esquema = new mongoose.Schema({
+    nombre : String,
+    correo : String,
+    contrasena : String,
+    imagen : String,
+    siguiendo : Array,
+    seguidores : Array,
+    posts : Array,
+});
+
+module.exports = mongoose.model('usuarios',esquema);
+
+//Estructura o las reglas
+
