@@ -1,8 +1,9 @@
 //import mongoose from 'mongoose';
 var mongoose = require('mongoose');
 
-var servidor = "localhost:27017";
-var nombreBaseDatos ="Itadakimasu";
+const port = "27017";
+const host = "localhost"
+const db = "Itadakimasu";
 
 mongoose.set('strictQuery', true);
 
@@ -12,7 +13,7 @@ class Database{
     }
 
     conectar(){
-        mongoose.connect(`mongodb://${servidor}/${nombreBaseDatos}`)
+        mongoose.connect(`mongodb://${host}:${port}/${db}`)
         .then(()=>{
             console.log("Se conecto a la base de datos");
         })
